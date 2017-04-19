@@ -2,9 +2,9 @@
 ##
 ##        Mod title:  Easy BBCode
 ##
-##      Mod version:  1.0.3
-##  Works on FluxBB:  1.5.8
-##     Release date:  2011-04-08
+##      Mod version:  1.0
+##  Works on FluxBB:  1.5.10
+##     Release date:  2011-04-19
 ##      Review date:  YYYY-MM-DD (Leave unedited)
 ##           Author:  DenisVS
 ##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com)
