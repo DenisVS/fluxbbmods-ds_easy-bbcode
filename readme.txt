@@ -4,7 +4,7 @@
 ##
 ##      Mod version:  1.0
 ##  Works on FluxBB:  1.5.10
-##     Release date:  2011-04-19
+##     Release date:  2017-04-19
 ##      Review date:  YYYY-MM-DD (Leave unedited)
 ##           Author:  DenisVS
 ##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com)
@@ -109,14 +109,13 @@ else
 	if ($pun_config['o_quickpost'] == '1' &&
 		!$pun_user['is_guest'] &&
 		($cur_topic['post_replies'] == '1' || ($cur_topic['post_replies'] == '' && $pun_user['g_post_replies'] == '1')) &&
-		($cur_topic['closed'] == '0' || $is_admmod))
-		// Clean up message from POST
-    $cur_post['message'] = pun_linebreaks(pun_trim($cur_post['message']));
-    // Replace four-byte characters (MySQL cannot handle them)
-    $cur_post['message'] = strip_bad_multibyte_chars($cur_post['message']);
- 
- 
+		($cur_topic['closed'] == '0' || $is_admmod))  {
+      // Clean up message from POST
+      $cur_post['message'] = pun_linebreaks(pun_trim($cur_post['message']));
+      // Replace four-byte characters (MySQL cannot handle them)
+      $cur_post['message'] = strip_bad_multibyte_chars($cur_post['message']);
 			$post_actions[] = '<li class="postquickquote"><span><a onmousedown="get_quote_text();" onclick="Quote(\''.pun_htmlspecialchars($cur_post['username']).'\', \''.pun_htmlspecialchars($db->escape($cur_post['message'])).'\'); return false;" href="post.php?tid='.$id.'&amp;qid='.$cur_post['id'].'">'.$lang_easy_bbcode['Quick quote'].'</a></span></li>';
+    }
 
 #
 #---------[ 13. FIND (line: 474) ]---------------------------------------------
