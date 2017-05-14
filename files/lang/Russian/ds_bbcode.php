@@ -1,5 +1,5 @@
 <?php
 
-$lang_easy_bbcode = array(
+$lang_ds_bbcode = array(
 'Quick quote'			=> 'Цитата'
 );

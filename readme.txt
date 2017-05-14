@@ -1,13 +1,13 @@
 ##
 ##
-##        Mod title:  Easy BBCode
+##        Mod title:  DS BBCode
 ##
 ##      Mod version:  1.0
 ##  Works on FluxBB:  1.5.10
-##     Release date:  2017-04-19
+##     Release date:  2017-05-149
 ##      Review date:  YYYY-MM-DD (Leave unedited)
 ##           Author:  DenisVS
-##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com)
+##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com), markItUp! by Jay Salvat.
 ##
 ##      Description:  This mod adds buttons for easy insertion of BBCode and
 ##                    smilies when posting and editing messages.
@@ -33,9 +33,9 @@
 #---------[ 1. UPLOAD ]-------------------------------------------------------
 #
 
-files/mod_easy_bbcode.php to /
-files/lang/English/easy_bbcode.php to lang/English/easy_bbcode.php
-files/lang/Russian/easy_bbcode.php to lang/Russian/easy_bbcode.php
+files/ds_bbcode.php to /
+files/lang/English/ds_bbcode.php to lang/English/ds_bbcode.php
+files/lang/Russian/ds_bbcode.php to lang/Russian/ds_bbcode.php
 
 
 #
@@ -54,7 +54,7 @@ post.php
 #---------[ 4. REPLACE WITH ]-------------------------------------------------
 #
 
-<?php endif; require PUN_ROOT.'mod_easy_bbcode.php'; ?>						<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
+<?php endif; require PUN_ROOT.'ds_bbcode.php'; ?>						<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
 
 #
 #---------[ 5. OPEN ]---------------------------------------------------------
@@ -72,7 +72,7 @@ edit.php
 #---------[ 7. REPLACE WITH ]-------------------------------------------------
 #
 
-<?php endif; $bbcode_form = 'edit'; $bbcode_field = 'req_message'; require PUN_ROOT.'mod_easy_bbcode.php'; ?>						<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
+<?php endif; $bbcode_form = 'edit'; $bbcode_field = 'req_message'; require PUN_ROOT.'ds_bbcode.php'; ?>						<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
 
 #
 #---------[ 8. OPEN ]---------------------------------------------------------
@@ -90,10 +90,10 @@ require PUN_ROOT.'lang/'.$pun_user['language'].'/topic.php';
 #---------[ 10. AFTER, ADD ]-------------------------------------------------
 #
 
-if (file_exists(PUN_ROOT.'lang/'.$pun_user['language'].'/easy_bbcode.php'))
-	require PUN_ROOT.'lang/'.$pun_user['language'].'/easy_bbcode.php';
+if (file_exists(PUN_ROOT.'lang/'.$pun_user['language'].'/ds_bbcode.php'))
+	require PUN_ROOT.'lang/'.$pun_user['language'].'/ds_bbcode.php';
 else
-	require PUN_ROOT.'lang/English/easy_bbcode.php';
+	require PUN_ROOT.'lang/English/ds_bbcode.php';
 
 #
 #---------[ 11. FIND (line: 357) ]---------------------------------------------
@@ -114,7 +114,7 @@ else
       $cur_post['message'] = pun_linebreaks(pun_trim($cur_post['message']));
       // Replace four-byte characters (MySQL cannot handle them)
       $cur_post['message'] = strip_bad_multibyte_chars($cur_post['message']);
-			$post_actions[] = '<li class="postquickquote"><span><a onmousedown="get_quote_text();" onclick="Quote(\''.pun_htmlspecialchars($cur_post['username']).'\', \''.pun_htmlspecialchars($db->escape($cur_post['message'])).'\'); return false;" href="post.php?tid='.$id.'&amp;qid='.$cur_post['id'].'">'.$lang_easy_bbcode['Quick quote'].'</a></span></li>';
+			$post_actions[] = '<li class="postquickquote"><span><a onmousedown="get_quote_text();" onclick="Quote(\''.pun_htmlspecialchars($cur_post['username']).'\', \''.pun_htmlspecialchars($db->escape($cur_post['message'])).'\'); return false;" href="post.php?tid='.$id.'&amp;qid='.$cur_post['id'].'">'.$lang_ds_bbcode['Quick quote'].'</a></span></li>';
     }
 
 #
@@ -134,14 +134,14 @@ else
 
 	$bbcode_form = 'quickpostform';
 	$bbcode_field = 'req_message';
-	require PUN_ROOT.'mod_easy_bbcode.php';
+	require PUN_ROOT.'ds_bbcode.php';
 	echo "\t\t\t\t\t\t".'<label class="required"><strong>'.$lang_common['Message'].' <span>'.$lang_common['Required'].'</span></strong><br />';
 }
 else
 {
 	$bbcode_form = 'quickpostform';
 	$bbcode_field = 'req_message';
-	require PUN_ROOT.'mod_easy_bbcode.php';
+	require PUN_ROOT.'ds_bbcode.php';
 	echo "\t\t\t\t\t\t".'<label>';
 }
 
