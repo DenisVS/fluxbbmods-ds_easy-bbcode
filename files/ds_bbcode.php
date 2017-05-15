@@ -7,6 +7,7 @@ if (!isset($bbcode_field))
 	$bbcode_field = 'req_message';
 
 ?>
+
 						<script type="text/javascript">
 						<!--
 							function insert_text(open, close)
@@ -80,13 +81,7 @@ if (!isset($bbcode_field))
 						-->
 						</script>
 						
-						<div style="padding-top: 4px; float: left">
-
-
-						
-<div style="float:right;overflow: hidden; margin-left: 3px;" class="spoil">
-	<div class="alt2">
-		<div style="display: none;  position:absolute; right: 0px; z-index: 9999; bottom:250px;">
+<div style="">
 
 <?php
 
@@ -117,19 +112,6 @@ else
 
 ?>
 
-
-		</div>
-	</div>
-</div>						
-						
-						
-
-
-
-<div style="float:right;overflow: hidden; margin-left: 3px;" class="spoil">
-	<div class="alt2" style="float:right;overflow: hidden;">
-
-
 <script type="text/javascript" src="include/ds_bbcode/jquery.markitup.js"></script>
 <script type="text/javascript" src="include/ds_bbcode/sets/bbcode/set.js"></script>
 <link rel="stylesheet" type="text/css" href="include/ds_bbcode/skins/markitup/style.css" />
@@ -140,7 +122,4 @@ else
   });
 </script>
 
-
-	</div>
 </div>
-						</div>
