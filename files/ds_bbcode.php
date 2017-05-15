@@ -7,7 +7,6 @@ if (!isset($bbcode_field))
 	$bbcode_field = 'req_message';
 
 ?>
-
 						<script type="text/javascript">
 						<!--
 							function insert_text(open, close)
@@ -92,17 +91,15 @@ $smiley_dups = array();
 $i = 0;
 foreach ($smilies as $smiley_text => $smiley_img)
 {
-	if ($i > 15) break;
-	
+	//if ($i > 15) break;
     if (!in_array($smiley_img, $smiley_dups))
 	{
-		echo "\t\t\t\t\t\t\t".'<img onclick="insert_text(\''.$smiley_text.'\', \'\');" src="img/smilies/'.$smiley_img.'" alt="'.$smiley_text.'" title="'.$smiley_text.'" />'."\n";
+		echo "\t\t\t\t\t\t\t".'<img onclick="insert_text(\' '.$smiley_text.' \', \'\');" src="img/smilies/'.$smiley_img.'" alt="'.$smiley_text.'" title="'.$smiley_text.'" />'."\n";
 		$i++;
 	}
 		
 	$smiley_dups[] = $smiley_img;
 }
-
 
 if (file_exists(PUN_ROOT.'style/'.$pun_user['style'].'/img/bbcode/b.png'))
     $btndir = $pun_config['o_base_url'].'/style/'.$pun_user['style'].'/img/bbcode/';
