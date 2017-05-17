@@ -4,7 +4,7 @@
 ##
 ##      Mod version:  1.0
 ##  Works on FluxBB:  1.5.10
-##     Release date:  2017-05-149
+##     Release date:  2017-05-14
 ##      Review date:  YYYY-MM-DD (Leave unedited)
 ##           Author:  DenisVS
 ##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com), markItUp! by Jay Salvat.
@@ -18,6 +18,9 @@
 ##   Affected files:  post.php
 ##                    edit.php
 ##                    viewtopic.php
+##                    include/pms_new/mdl/topic.php
+##                    include/pms_new/mdl/post.php
+##                    include/pms_new/mdl/edit.php
 ##
 ##       Affects DB:  No
 ##
@@ -188,18 +191,15 @@ include/pms_new/mdl/topic.php
 
 							<label><textarea name="req_message" rows="7" cols="75" tabindex="<?php echo $cur_index++ ?>"></textarea></label>
 
-
 #
 #---------[ . BEFORE, ADD ]-------------------------------------------------
 #
-
 
 <?php
 $bbcode_form = 'quickpostform';
 $bbcode_field = 'req_message';
 require PUN_ROOT.'ds_bbcode.php';
 ?>
-
 
 #
 #---------[ . OPEN ]---------------------------------------------------------
@@ -218,11 +218,9 @@ include/pms_new/mdl/post.php
 #---------[ . BEFORE, ADD ]-------------------------------------------------
 #
 
-
 $bbcode_form = 'quickpostform';
 $bbcode_field = 'req_message';
 require PUN_ROOT.'ds_bbcode.php';
-
 
 #
 #---------[ . OPEN ]---------------------------------------------------------
