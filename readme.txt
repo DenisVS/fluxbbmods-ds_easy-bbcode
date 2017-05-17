@@ -148,3 +148,100 @@ else
 #
 #---------[ 15. SAVE/UPLOAD ]--------------------------------------------------
 #
+#                    ATTENTION! 
+#   The following fixes only if you use New PMS from Visman! 
+#
+#
+#---------[ 16. OPEN ]---------------------------------------------------------
+#
+
+include/pms_new/mdl/topic.php
+
+#
+#---------[ . FIND (line: 292) ]---------------------------------------------
+#
+
+	// Perform the main parsing of the message (BBCode, smilies, censor words etc)
+	$cur_post['message'] = parse_message($cur_post['message'], $cur_post['hide_smilies']);
+
+#
+#---------[ . BEFORE, ADD ]-------------------------------------------------
+#
+
+  if (file_exists(PUN_ROOT.'lang/'.$pun_user['language'].'/ds_bbcode.php'))
+    require PUN_ROOT.'lang/'.$pun_user['language'].'/ds_bbcode.php';
+  else
+    require PUN_ROOT.'lang/English/ds_bbcode.php';
+
+	if ($pun_config['o_quickpost'] == '1' &&		
+		($cur_topic['post_replies'] == '1' || ($cur_topic['post_replies'] == '' && $pun_user['g_post_replies'] == '1')))  {
+      // Clean up message from POST
+      $cur_post['message'] = pun_linebreaks(pun_trim($cur_post['message']));
+      // Replace four-byte characters (MySQL cannot handle them)
+      $cur_post['message'] = strip_bad_multibyte_chars($cur_post['message']);
+			$post_actions[] = '<li class="postquickquote"><span><a onmousedown="get_quote_text();" onclick="Quote(\''.pun_htmlspecialchars($cur_post['username']).'\', \''.pun_htmlspecialchars($db->escape($cur_post['message'])).'\'); return false;" href="post.php?tid='.$id.'&amp;qid='.$cur_post['id'].'">'.$lang_ds_bbcode['Quick quote'].'</a></span></li>';
+    }
+
+#
+#---------[ . FIND (line: 373) ]---------------------------------------------
+#
+
+							<label><textarea name="req_message" rows="7" cols="75" tabindex="<?php echo $cur_index++ ?>"></textarea></label>
+
+
+#
+#---------[ . BEFORE, ADD ]-------------------------------------------------
+#
+
+
+<?php
+$bbcode_form = 'quickpostform';
+$bbcode_field = 'req_message';
+require PUN_ROOT.'ds_bbcode.php';
+?>
+
+
+#
+#---------[ . OPEN ]---------------------------------------------------------
+#
+
+include/pms_new/mdl/post.php
+
+#
+#---------[ . FIND (line: 513) ]---------------------------------------------
+#
+
+?>
+							<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
+							
+#
+#---------[ . BEFORE, ADD ]-------------------------------------------------
+#
+
+
+$bbcode_form = 'quickpostform';
+$bbcode_field = 'req_message';
+require PUN_ROOT.'ds_bbcode.php';
+
+
+#
+#---------[ . OPEN ]---------------------------------------------------------
+#
+
+include/pms_new/mdl/edit.php
+
+#
+#---------[ . FIND (line: 513) ]---------------------------------------------
+#
+
+							<label class="required"><strong><?php echo $lang_common['Message'] ?> <span><?php echo $lang_common['Required'] ?></span></strong><br />
+							
+#
+#---------[ . BEFORE, ADD ]-------------------------------------------------
+#
+
+<?php
+$bbcode_form = 'quickpostform';
+$bbcode_field = 'req_message';
+require PUN_ROOT.'ds_bbcode.php';
+?>
