@@ -13,32 +13,59 @@
 	background-image:url(images/underline.png);
 }
 
-.markItUp .markItUpButton4 a	{
-	background-image:url(images/picture.png);
+.markItUp .markItUpButton4 a {
+	background-image:url(images/stroke.png);
 }
-.markItUp .markItUpButton5 a	{
+
+.markItUp .markItUpButton5 a {
+	background-image:url(images/heading.png);
+}
+
+.markItUp .markItUpButton6 a {
+	background-image:url(images/offtop.png);
+}
+
+.markItUp .markItUpButton7 a {
+	background-image:url(images/inserted.png);
+}
+
+.markItUp .markItUpButton8 a {
+	background-image:url(images/emphasised.png);
+}
+
+
+.markItUp .markItUpButton9 a	{
+	background-image:url(images/quotes.png);
+}
+.markItUp .markItUpButton10 a	{
+	background-image:url(images/code.png);
+}
+
+.markItUp .markItUpButton11 a	{
 	background-image:url(images/link.png);
 }
 
-.markItUp .markItUpButton6 a	{
+.markItUp .markItUpButton12 a	{
+	background-image:url(images/picture.png);
+}
+
+
+
+
+.markItUp .markItUpButton99 a	{
 	background-image:url(images/fonts.png);
 }
-.markItUp .markItUpButton7 a	{
+.markItUp .markItUpButton99 a	{
 	background-image:url(images/list-bullet.png);
 }
-.markItUp .markItUpButton8 a	{
+.markItUp .markItUpButton99 a	{
 	background-image:url(images/list-numeric.png);
 }
-.markItUp .markItUpButton9 a	{
+.markItUp .markItUpButton99 a	{
 	background-image:url(images/list-item.png);
 }
 
-.markItUp .markItUpButton10 a	{
-	background-image:url(images/quotes.png);
-}
-.markItUp .markItUpButton11 a	{
-	background-image:url(images/code.png);
-}
+
 	
 .markItUp .clean a {
 	background-image:url(images/clean.png);
@@ -99,17 +126,9 @@
 		background:black;
 	}
 
-.markItUp .markItUpButton15 a {
-	background-image:url(images/stroke.png);
-}
 
-.markItUp .icon-heading a {
-	background-image:url(images/heading.png);
-}
 
-.markItUp .icon-offtop a {
-	background-image:url(images/offtop.png);
-}
+
 
 .markItUp .markItUpButton16 a {
 	background-image:url(images/media.png);

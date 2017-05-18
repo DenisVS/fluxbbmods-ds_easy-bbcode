@@ -16,22 +16,66 @@ mySettings = {
 		{name:'Bold', key:'B', openWith:'[b]', closeWith:'[/b]'},
 		{name:'Italic', key:'I', openWith:'[i]', closeWith:'[/i]'},
 		{name:'Underline', key:'U', openWith:'[u]', closeWith:'[/u]'},
+		{name:'Stroke through', key:'S', openWith:'[s]', closeWith:'[/s]' },		
+		{name:'Heading', openWith:'[h]', closeWith:'[/h]',},
+		{name:'Offtop', openWith:'[off]', closeWith:'[/off]',},
+		{name:'Inserted', openWith:'[ins]', closeWith:'[/ins]',},
+		{name:'Emphasised', openWith:'[em]', closeWith:'[/em]',},
+		{name:'Quotes', openWith:'[quote]', closeWith:'[/quote]'},
+		{name:'Code', openWith:'[code]', closeWith:'[/code]'},
 		{separator:'---------------' },
-		{name:'Picture', key:'P', replaceWith:'[img][![Url]!][/img]'},
-		{name:'Link', key:'L', openWith:'[url=[![Url]!]]', closeWith:'[/url]', placeHolder:'Your text to link here...'},
+    {name:'Link', key:'L',
+      replaceWith:function(markItUp) {
+        var text=markItUp.selection;
+        url = prompt("URL", "");
+        if (url == null) {
+          return;
+        }
+        if (text == "") {
+          return '[url]'+url+'[/url]';
+        } else {
+          return '[url='+url+']'+text+'[/url]';
+        }
+      }
+    },
+    {name:'Picture', key:'P',
+      replaceWith:function(markItUp) {
+        var text=markItUp.selection;
+        if (text == "") {
+          text = prompt("URL", "");
+          if (text == null) {
+            return;
+          }
+        }
+        return '[img]'+text+'[/img]';
+      }
+    },
+
+
+
+
+
+    {name:'Sort',
+      replaceWith:function(markItUp) { 
+        var s = markItUp.selection.split((($.browser.mozilla) ? "\n" : "\r\n"));
+        s.sort();
+        if (markItUp.altKey) s.reverse();
+        return s.join("\n");
+       }
+    },
+
+		
 		{separator:'---------------' },
 		{name:'Size', key:'S', openWith:'[size=[![Text size]!]]', closeWith:'[/size]',
 		dropMenu :[
-			{name:'Heading', openWith:'[h]', closeWith:'[/h]', className:"icon-heading" },
-			{name:'Offtop', openWith:'[off]', closeWith:'[/off]', className:"icon-offtop" }
+
 		]},
 		{separator:'---------------' },
 		{name:'Bulleted list', openWith:'[list]\n', closeWith:'\n[/list]'},
 		{name:'Numeric list', openWith:'[list=[![Starting number]!]]\n', closeWith:'\n[/list]'}, 
 		{name:'List item', openWith:'[*] '},
 		{separator:'---------------' },
-		{name:'Quotes', openWith:'[quote]', closeWith:'[/quote]'},
-		{name:'Code', openWith:'[code]', closeWith:'[/code]'}, 
+ 
 		{separator:'---------------' },
 		{name:'Clean', className:"clean", replaceWith:function(markitup) { return markitup.selection.replace(/\[(.*?)\]/g, "") } },
 		{name:'Preview', className:"preview", call:'preview' },
@@ -48,9 +92,11 @@ mySettings = {
 				{name:'Black', openWith:'[color=black]', closeWith:'[/color]', className:"col3-3" }
 			]},
 		{separator:'---------------' },
-		{name:'Stroke through', key:'S', openWith:'[s]', closeWith:'[/s]' },
+
 		{name:'Media', key:'M', openWith:'[media]', closeWith:'[/media]' },
 
 	]
 }
 //		
+		
+
