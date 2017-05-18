@@ -34,6 +34,9 @@ mySettings = {
         if (text == "") {
           return '[url]'+url+'[/url]';
         } else {
+          if (url == "") {
+            url = text;
+          }
           return '[url='+url+']'+text+'[/url]';
         }
       }
