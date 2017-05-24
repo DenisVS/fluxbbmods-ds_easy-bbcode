@@ -11,9 +11,7 @@ if (!isset($bbcode_field))
 <link rel="stylesheet" type="text/css" href="include/ds_bbcode/skins/markitup/style.css" />
 <link rel="stylesheet" type="text/css" href="include/ds_bbcode/sets/bbcode/style.css" />
 <script>var bbcodeField = <?php echo json_encode($bbcode_field); ?>; var bbcodeForm = <?php echo json_encode($bbcode_form); ?>;</script>
-
-    <div>
-      <div class="emoticonBlock" style="display: none; padding : 5px;">
+<div class="emoticonBlock" style="display: none; padding : 5px;">
 <?php
 // Display the smiley set
 $smiley_dups = array();
@@ -29,13 +27,5 @@ foreach ($smilies as $smiley_text => $smiley_img)
 }
 
 ?>
-    </div>
-
+</div>
 <script type="text/javascript" src="js/ds_bbcode.js"></script>
-
-<script type="text/javascript" >
-
-</script>
-    <script>
-	
-    </script>
