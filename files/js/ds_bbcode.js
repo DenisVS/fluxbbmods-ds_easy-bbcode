@@ -68,3 +68,20 @@ function Quote(user_name, message)
   startq = '[quote=' + user_name + ']' + (quote_text != '' ? quote_text : message) + '[/quote]';
   insert_text(startq,'');
 }
+
+/***********
+* Lazy loading collapsible Emoticons set by DenisVS
+***********/
+$(document).ready(function() {
+  $("textarea").markItUp(mySettings);
+    $(".emoticonButton").click(function () {
+    $header = $(".emoticonBlock");
+    //getting current element
+    $content = $header;
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+      //execute this after slideToggle is done
+      var instance = $("img.lazy").Lazy({chainable: false});  //load image
+     });
+  });	  
+});

@@ -196,3 +196,7 @@
 	.markItUp .palette .col3-9 a {
 		background:#000000;
 	}
+
+.markItUp .emoticonButton a {
+	background-image:url(images/smile.png);
+}

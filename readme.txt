@@ -39,7 +39,8 @@
 files/ds_bbcode.php to /
 files/lang/English/ds_bbcode.php to lang/English/ds_bbcode.php
 files/lang/Russian/ds_bbcode.php to lang/Russian/ds_bbcode.php
-
+files/js/jquery.lazy.min.js to js/jquery.lazy.min.js
+files/js/ds_bbcode.js to js/ds_bbcode.js
 
 #
 #---------[ 2. OPEN ]---------------------------------------------------------

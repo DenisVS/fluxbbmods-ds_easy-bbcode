@@ -85,6 +85,7 @@ mySettings = {
 		{name:'Numeric list', openWith:'[list=[![Starting number]!]]\n', closeWith:'\n[/list]'}, 
 		{name:'List item', openWith:'[*] ', closeWith:' [/*]'},
 		{separator:'---------------' },
+		{name:'Emoticons', className:'emoticonButton'},
 		{	name:'Colors', className:'palette', dropMenu: [
 				{name:'Yellow',	openWith:'[color=#FCE94F]', closeWith:'[/color]',	className:"col1-1" },
 				{name:'Yellow',	openWith:'[color=#EDD400]', closeWith:'[/color]',	className:"col2-1" },
