@@ -4,6 +4,7 @@ if (!isset($bbcode_form))
 	$bbcode_form = 'post';
 if (!isset($bbcode_field))
 	$bbcode_field = 'req_message';
+//echo '<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>'."\n";
 ?>
 <script type="text/javascript" src="include/ds_bbcode/jquery.markitup.js"></script>
 <script type="text/javascript" src="include/ds_bbcode/sets/bbcode/set.js"></script>

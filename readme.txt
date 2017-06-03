@@ -30,7 +30,27 @@
 ##                    all applicable files before proceeding.
 ##
 ##
+##
+##
 
+#
+#---------[ 0. ]-------------------------------------------------------
+
+#
+#                    ATTENTION! 
+#   Now You should to check the source code of the pages of your forum in your browser.
+#   Open viewtopic.php, post.php, edit.php. Then open the source code viewer by 
+#   pressing Ctrl+U.
+#   Press Ctrl+F and type "jquery" into the search form.
+#   If You find out jquery.min.js, jquery-xxxxxxx.min.js etc, You must use it (just go to step 1)
+#   But if jquery is not present (this will be if no any mod is installed), open 
+#   the files/ds_bbcode.php file and remove two forward slashes in line 7
+#   In original, line 7:
+#   //echo '<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>'."\n";
+#   must be seen as
+#   echo '<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>'."\n";
+#   jQuery needs to be the first script you import. Take care about it.
+#   
 
 #
 #---------[ 1. UPLOAD ]-------------------------------------------------------
@@ -100,7 +120,7 @@ else
 	require PUN_ROOT.'lang/English/ds_bbcode.php';
 
 #
-#---------[ 11. FIND (line: 357) ]---------------------------------------------
+#---------[ 11. FIND (line: 355) ]---------------------------------------------
 #
 
 	// Perform the main parsing of the message (BBCode, smilies, censor words etc)
@@ -122,7 +142,7 @@ else
     }
 
 #
-#---------[ 13. FIND (line: 474) ]---------------------------------------------
+#---------[ 13. FIND (line: 470) ]---------------------------------------------
 #
 
 
