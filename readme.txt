@@ -4,13 +4,12 @@
 ##
 ##      Mod version:  1.0
 ##  Works on FluxBB:  1.5.10
-##     Release date:  2017-05-14
-##      Review date:  YYYY-MM-DD (Leave unedited)
+##     Release date:  2017-06-03
 ##           Author:  DenisVS
 ##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com), markItUp! by Jay Salvat.
 ##
 ##      Description:  This mod adds buttons for easy insertion of BBCode and
-##                    smilies when posting and editing messages.
+##                    lazy loading emoticons when posting and editing messages.
 ##                    Quick quote mod included.
 ##
 ##   Repository URL:  http://fluxbb.org/resources/mods/xxx (Leave unedited)
