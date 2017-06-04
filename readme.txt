@@ -12,7 +12,7 @@
 ##                    lazy loading emoticons when posting and editing messages.
 ##                    Quick quote mod included.
 ##
-##   Repository URL:  http://fluxbb.org/resources/mods/xxx (Leave unedited)
+##   Repository URL:  https://fluxbb.org/resources/mods/ds-bbcode/
 ##
 ##   Affected files:  post.php
 ##                    edit.php
@@ -41,7 +41,7 @@
 #   Open viewtopic.php, post.php, edit.php. Then open the source code viewer by 
 #   pressing Ctrl+U.
 #   Press Ctrl+F and type "jquery" into the search form.
-#   If You find out jquery.min.js, jquery-xxxxxxx.min.js etc, You must use it (just go to step 1)
+#   If You find an entry jquery.min.js, jquery-xxxxxxx.min.js etc, You must use it (just go to step 1)
 #   But if jquery is not present (this will be if no any mod is installed), open 
 #   the files/ds_bbcode.php file and remove two forward slashes in line 7
 #   In original, line 7:
