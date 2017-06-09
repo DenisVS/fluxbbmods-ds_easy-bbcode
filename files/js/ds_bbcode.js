@@ -49,7 +49,7 @@ function insert_text(open, close)
 }
 
 /***********
-* Functions for mod QuickQuote v1.1 by D.S.Denton
+* Functions for mod QuickQuote by DenisVS (based on v1.1 by D.S.Denton)
 ***********/
 quote_text = '';
 function get_quote_text()
@@ -63,9 +63,9 @@ function get_quote_text()
     quote_text = document.getSelection();
 }
 
-function Quote(user_name, message)
+function Quote(user_name, message, qid)
 {
-  startq = '[quote=' + user_name + ']' + (quote_text != '' ? quote_text : message) + '[/quote]';
+  startq = '[quote=' + user_name + ';' + qid + ']' + (quote_text != '' ? quote_text : message) + '[/quote]';
   insert_text(startq,'');
 }
 
