@@ -2,9 +2,9 @@
 ##
 ##        Mod title:  DS BBCode
 ##
-##      Mod version:  1.1
+##      Mod version:  1.1.1
 ##  Works on FluxBB:  1.5.10
-##     Release date:  2017-06-09
+##     Release date:  2017-07-19
 ##           Author:  DenisVS
 ##         Based on:  Easy BBCode by Rickard Andersson & Daris (daris91@gmail.com), markItUp! by Jay Salvat.
 ##
