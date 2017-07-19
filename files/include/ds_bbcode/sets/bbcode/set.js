@@ -31,10 +31,10 @@ mySettings = {
 				posts = prompt("Posts", "");
 				if ((posts == "") | (posts == null))  {
 
-					return '[hide]'+text;
+					return '[hide]';
 
 				}
-				return '[hide='+posts+']'+text;
+				return '[hide='+posts+']';
 			  },
   			  closeWith:'[/hide]'
 			},
